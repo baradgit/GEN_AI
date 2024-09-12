@@ -8,7 +8,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 # Set the title of the web app based on the problem statement
 st.title("Tablet and Doctor Recommendation System")
 st.write("Example text 1.patient having fever please suggest tablets and other details.")
-st,write("Example text 2.patient having back pain can you suggest which doctor to consult and other details.")
+st.write("Example text 2.patient having back pain can you suggest which doctor to consult and other details.")
 
 # Prompt user to enter their Groq API Key securely
 GROQ_API_KEY = st.text_input("Enter your Groq API Key", type="password")
