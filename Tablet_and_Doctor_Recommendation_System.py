@@ -87,4 +87,7 @@ else:
                 response = structured_llm.invoke(input_text)
                 display_response_as_table(response, tablet_placeholder, doctor_placeholder)
             except Exception as e:
-                st.error(f"Unable to process the query: {e}. Please provide clear and valid information.")
+                if 'tool_use_failed' in str(e):
+                    st.error("Please try to submit again. The prompt should have clear and valid information.")
+                else:
+                    st.error(f"Unable to process the query: {e}")
